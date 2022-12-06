@@ -1,0 +1,48 @@
+<div class="d-flex">
+    <app-sidebar></app-sidebar>
+    <div class="container d-flex justify-content-center flex-column align-items-center">
+
+
+        <div>
+            <form>
+                <div class="form-row">
+                    <div hidden class="col-sm-2 col-md-2 col-lg-2">
+                        <label>ID Pays</label>
+                        <input type="text" [(ngModel)]="newConferance.id" [ngModelOptions]="{standalone: true}"
+                            name="id" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">Title</label>
+                        <input type="text" [(ngModel)]="newConferance.title" [ngModelOptions]="{standalone: true}"
+                            class="form-control" placeholder="Conferance Title..">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4">Location</label>
+                        <input type="text" [(ngModel)]="newConferance.location" [ngModelOptions]="{standalone: true}"
+                            class="form-control" placeholder="Location..">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4">places number </label>
+                        <input type="number" [(ngModel)]="newConferance.nbPlace" [ngModelOptions]="{standalone: true}"
+                            class="form-control" placeholder="Location..">
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label class="mb-2">Image :</label>
+                        <input type="file" (change)="onImageUpload($event)" name="logo" class="form-control"
+                            style="width:1000px ;">
+                    </div>
+
+                    <div class="form-group" style="width: 1000px;">
+                        <label for="exampleFormControlTextarea1">Descriptions </label>
+                        <textarea [(ngModel)]="newConferance.description" [ngModelOptions]="{standalone: true}"
+                            class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <button type="submit" (click)="addconferance()" class="btn btn-success">Ajouter</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

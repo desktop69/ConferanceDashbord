@@ -1,0 +1,38 @@
+<div class="d-flex">
+    <app-sidebar></app-sidebar>
+    <div class="container d-flex justify-content-between flex-column align-items mt-5">
+
+        <form>
+            <div class="form-row">
+                <div hidden class="col-sm-2 col-md-2 col-lg-2">
+                    <label>ID Pays</label>
+                    <input type="text" [(ngModel)]="newpart.idpart" [ngModelOptions]="{standalone: true}" name="idpart"
+                        class="form-control">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">name </label>
+                    <input type="text" [(ngModel)]="newpart.nompart" [ngModelOptions]="{standalone: true}"
+                        class="form-control" placeholder="Participant name..">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Email</label>
+                    <input type="email" [(ngModel)]="newpart.email" [ngModelOptions]="{standalone: true}"
+                        class="form-control" placeholder="Email..">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Adress </label>
+                    <input type="text" [(ngModel)]="newpart.adress" [ngModelOptions]="{standalone: true}"
+                        class="form-control" id="nbPlace" placeholder="Adress..">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">phone number </label>
+                    <input type="number" [(ngModel)]="newpart.numtel" [ngModelOptions]="{standalone: true}"
+                        class="form-control" id="nbPlace" placeholder="phone number ..">
+                </div>
+            </div>
+            <div class="mt-2">
+                <button type="submit" (click)="AddPArticipant()" class="btn btn-success">Ajouter</button>
+            </div>
+        </form>
+    </div>
+</div>

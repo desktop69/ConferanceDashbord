@@ -1,0 +1,39 @@
+<div class="">
+    <app-sidebar></app-sidebar>
+    <div class="container" style="margin-top: -700px;
+    margin-left: 312px;">
+        <div class="card shadow mb-4">
+            <div class="card-body">
+
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#id participant</th>
+                            <th scope="col">nompart</th>
+                            <th scope="col">email</th>
+                            <th scope="col">adress</th>
+                            <th scope="col">numtel</th>
+                            <th scope="col">nom du conferance </th>
+                            <th scope="col">Actions </th>
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let participants of participants">
+                        <tr>
+                            <td>{{participants.idpart}}</td>
+                            <td>{{participants.nompart}}</td>
+                            <td>{{participants.email}}</td>
+                            <td>{{participants.adress}}</td>
+                            <td>{{participants.numtel}}</td>
+                            <td>{{participants.conference.title}}</td>
+                            <td><a class="btn btn-danger" (click)="deleteParticipant(participants)">Supprimer</a></td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+    </div>
+</div>

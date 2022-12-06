@@ -1,0 +1,41 @@
+<div class="d-flex">
+    <app-sidebar></app-sidebar>
+    <div class="container d-flex justify-content-between flex-column align-items mt-5">
+        <div class="card shadow mb-4">
+            <div class="card-body">
+
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#id</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">date</th>
+                            <th scope="col">descrption</th>
+                            <th scope="col">location</th>
+                            <th scope="col">Nombre de place</th>
+                            <th scope="col">Guest </th>
+                            <th scope="col">image</th>
+                            <th scope="col">Actions </th>
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let conferances of conferances ; let i = index">
+                        <tr>
+                            <td>{{conferances.id}}</td>
+                            <td>{{conferances.title}}</td>
+                            <td>{{conferances.description}}</td>
+                            <td>{{conferances.location}}</td>
+                            <td>{{conferances.nbPlace}}</td>
+                            <td data-label="image"><img [src]="listImages[i]" alt="img"
+                                    style="width: 120px; height:90px">
+                            </td>
+                            <td>{{conferances.guest}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+
+            </div>
+        </div>
+    </div>
+</div>
