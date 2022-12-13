@@ -17,7 +17,7 @@ currentConferance = new Conferance();
 
     updateconferance (){
       this.conferanceService.UpdateConferance(this.currentConferance).subscribe(cur =>{
-        this.router.navigate([])
+        this.router.navigate(['conferancetable'])
       })
 
     }
@@ -25,6 +25,10 @@ currentConferance = new Conferance();
 
 
   ngOnInit(): void {
+
+    this.conferanceService.ConsultConferance(this.activatedRoute.snapshot.params['id']).
+    subscribe( con =>{ this.currentConferance = con;
+    } ) ;
   }
 
 }

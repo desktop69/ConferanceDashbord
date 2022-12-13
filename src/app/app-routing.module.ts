@@ -6,6 +6,7 @@ import { AddParticipantComponent } from './add-participant/add-participant.compo
 import { ConferancetableComponent } from './conferancetable/conferancetable.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ParticipantComponent } from './participant/participant.component';
+import { UpdatConferanceComponent } from './updat-conferance/updat-conferance.component';
 
 const routes: Routes = [
   { path: "", component: LandingPageComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: "add-conferancetable", component: AddConferanceComponent },
   { path: "Participantfecth", component: ParticipantComponent },
   { path: "AddParticipant", component: AddParticipantComponent },
+  { path: "UpdatConferancet/:id", component: UpdatConferanceComponent },
 
 
 ];

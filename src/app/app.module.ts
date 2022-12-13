@@ -16,6 +16,11 @@ import { HeaderComponent } from './shared/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { FooterFrontComponent } from './shared/footer-front/footer-front.component';
+import { HeaderFrontComponent } from './shared/header-front/header-front.component';
+import { MainComponent } from './shared/main/main.component';
+import { DetailComponent } from './shared/detail/detail.component';
+import { UpdateCoferanceComponent } from './update-coferance/update-coferance.component';
 
 
 @NgModule({
@@ -29,6 +34,11 @@ import { MatIconModule } from '@angular/material/icon';
     SidebarComponent,
     LandingPageComponent,
     HeaderComponent,
+    FooterFrontComponent,
+    HeaderFrontComponent,
+    MainComponent,
+    DetailComponent,
+    UpdateCoferanceComponent,
 
 
   ],

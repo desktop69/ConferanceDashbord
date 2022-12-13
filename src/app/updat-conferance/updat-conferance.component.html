@@ -1,1 +1,43 @@
-<p>updat-conferance works!</p>
+<div class="d-flex">
+    <app-sidebar></app-sidebar>
+    <div class="container d-flex justify-content-center flex-column align-items-center">
+
+
+        <div>
+            <form>
+                <div class="form-row">
+                    <div hidden class="col-sm-2 col-md-2 col-lg-2">
+                        <label>ID Pays</label>
+                        <input type="text" [(ngModel)]="currentConferance.id" (ngModelChange)="currentConferance.id" [ngModelOptions]="{standalone: true}"
+                            name="id" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4"><strong><h4>Title</h4></strong></label>
+                        <input type="text" [(ngModel)]="currentConferance.title" [ngModelOptions]="{standalone: true}"
+                            class="form-control" placeholder="Conferance Title.." (ngModelChange)="currentConferance.title">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4">Location</label>
+                        <input type="text" [(ngModel)]="currentConferance.location" [ngModelOptions]="{standalone: true}"
+                            class="form-control" placeholder="Location.." (ngModelChange)="currentConferance.location">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4">place</label>
+                        <input type="number" [(ngModel)]="currentConferance.nbPlace" [ngModelOptions]="{standalone: true}"
+                            class="form-control" placeholder="Location.." (ngModelChange)="currentConferance.nbPlace">
+                    </div>
+
+
+                    <div class="form-group" style="width: 1000px;">
+                        <label for="exampleFormControlTextarea1">Descriptions </label>
+                        <textarea [(ngModel)]="currentConferance.description" [ngModelOptions]="{standalone: true}"
+                            class="form-control" id="exampleFormControlTextarea1" rows="3" (ngModelChange)="currentConferance.description"></textarea>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <button type="submit" (click)="updateconferance()" class="btn btn-success">Ajouter</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

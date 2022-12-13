@@ -42,6 +42,16 @@ export class ConferanceService {
     return this.http.get<ConferanceWrapper>(this.apiURLCon)
    }
 
+
+   DeletConferance(id : number){
+    const url = `${this.apiURL}/${id}`;
+    return this.http.delete(url, httpOptions)
+   }
+
+
+
+
+
       /*image functions*/
   
       uploadImage(file : File , filename : string) {

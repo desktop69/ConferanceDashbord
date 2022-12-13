@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeaderComponent } from './header.component';
+import { UpdateCoferanceComponent } from './update-coferance.component';
 
-describe('HeaderComponent', () => {
-  let component: HeaderComponent;
-  let fixture: ComponentFixture<HeaderComponent>;
+describe('UpdateCoferanceComponent', () => {
+  let component: UpdateCoferanceComponent;
+  let fixture: ComponentFixture<UpdateCoferanceComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeaderComponent ]
+      declarations: [ UpdateCoferanceComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HeaderComponent);
+    fixture = TestBed.createComponent(UpdateCoferanceComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
